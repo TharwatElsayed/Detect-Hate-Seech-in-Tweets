@@ -16,18 +16,8 @@ st.markdown("---")
 # Create tabs
 tab1, tab2, tab3 = st.tabs(["Dataset Overview", "Dataset Description", "Dataset Information"])
 
-# Tab 1: Dataset Overview
+# Tab 1: Dataset Brief Information
 with tab1:
-    st.subheader('Dataset Overview (Before Preprocessing)')
-    st.write(df.head(10))
-
-# Tab 2: Dataset Columns Description
-with tab2:
-    st.subheader('Dataset Columns Description')
-    st.write(df.describe(include='all'))
-
-# Tab 3: Dataset Brief Information
-with tab3:
     st.subheader('Dataset Information')
 
     # Capture the df.info() output
@@ -37,6 +27,19 @@ with tab3:
 
     # Display the info in Streamlit
     st.text(s)
+
+# Tab 2: Dataset Columns Description
+with tab2:
+    st.subheader('Dataset Columns Description')
+    st.write(df.describe(include='all'))
+
+# Tab 3: Dataset Overview
+with tab3:
+    st.subheader('Dataset Overview (Before Preprocessing)')
+    st.write(df.head(10))
+
+
+
 
 # Horizontal line separator
 st.markdown("---")
