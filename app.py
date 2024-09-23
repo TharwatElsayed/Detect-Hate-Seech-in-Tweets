@@ -14,7 +14,8 @@ st.title('Hate Speech and Offensive Language Analysis')
 st.markdown("---")
 
 st.subheader('Dataset Overview')
-st.write('This dataset contains data related to hate speech and offensive language.')
+st.write('This dataset contains data related to hate speech and offensive language. Davidson introduced a dataset of tweets categorized using a crowdsourced hate speech vocabulary. These tweets were classified into three categories: hate speech, offensive language, and neither. The dataset, consisting of 24,802 labeled tweets, includes columns for the number of CrowdFlower coders, the 
+count of hate speech and offensive language identifications, and a class label indicating the majority opinion: 0 for hate speech, 1 for offensive language, and 2 for neither.')
 
 # Horizontal line separator
 st.markdown("---")
