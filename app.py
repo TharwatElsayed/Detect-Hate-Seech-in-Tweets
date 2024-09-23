@@ -19,7 +19,7 @@ Davidson introduced a dataset of tweets categorized using a crowdsourced hate sp
 These tweets were classified into three categories: hate speech, offensive language, and neither. 
 The dataset, consisting of 24,802 labeled tweets, includes columns for the number of CrowdFlower coders, 
 the count of hate speech and offensive language identifications, and a class label indicating 
-the majority opinion: 0 for hate speech, 1 for offensive language, and 2 for neither.\n\n\n
+the majority opinion: 0 for hate speech, 1 for offensive language, and 2 for neither.\n
 The dataset published in:\n
 Davidson, T., Warmsley, D., Macy, M., & Weber, I. (2017, May). Automated hate speech detection and the problem of offensive language. In Proceedings of the international AAAI conference on web and social media (Vol. 11, No. 1, pp. 512-515).
 """)
