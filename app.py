@@ -13,6 +13,12 @@ st.title('Hate Speech and Offensive Language Analysis')
 # Horizontal line separator
 st.markdown("---")
 
+st.subheader('Dataset Overview')
+st.write('This dataset contains data related to hate speech and offensive language.')
+
+# Horizontal line separator
+st.markdown("---")
+
 # Create tabs
 tab1, tab2, tab3 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview"])
 
