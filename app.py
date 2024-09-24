@@ -5,6 +5,12 @@ import io
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+# Load the dataset
+df = pd.read_csv('labeled_data.csv')
+
+# Set Streamlit page title
+st.title('Hate Speech and Offensive Language Analysis')
+
 # Create a vertical tab menu in the sidebar
 with st.sidebar:
     selected = option_menu(
