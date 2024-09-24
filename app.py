@@ -62,10 +62,7 @@ with tab3:
 with tab4:
     # Check for missing data
     st.subheader("Missing values in each column:")
-    missing_data = df.isnull().sum()
-
-    # Display the missing data
-    st.write(missing_data)
+    st.write(df.isnull().sum())
    
 
 # Horizontal line separator
