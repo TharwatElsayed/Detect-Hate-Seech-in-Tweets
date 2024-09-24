@@ -38,7 +38,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Dataset Information", "Dataset Description", 
 
 # Tab 1: Dataset Brief Information
 with tab1:
-    st.subheader('Dataset Information)
+    st.subheader('Dataset Information')
 
     # Capture the df.info() output
     buffer = io.StringIO()
