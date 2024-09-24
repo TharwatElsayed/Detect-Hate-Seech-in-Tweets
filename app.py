@@ -64,39 +64,6 @@ with tab4:
     st.subheader("Missing values in each column:")
     st.write(df.isnull().sum())
    
-
-# Horizontal line separator
-st.markdown("---")
-
-st.subheader('Understanding Class Distribution')
-
-# Create a radio button for chart selection
-chart_type = st.radio("Choose Chart Type", ('Bar Chart', 'Pie Chart'))
-
-# Display the selected chart
-if chart_type == 'Bar Chart':
-    st.subheader('Distribution of Classes (Bar Chart)')
-    plt.figure(figsize=(8, 6))
-    plt.hist(df['class'], bins=3, edgecolor='black')
-    plt.xlabel('Class')
-    plt.ylabel('Frequency')
-    plt.title('Distribution of Classes')
-    plt.xticks([0, 1, 2], ['Hate Speech', 'Offensive Language', 'Neither'])
-    st.pyplot(plt)
-
-elif chart_type == 'Pie Chart':
-    st.subheader('Proportion of Classes (Pie Chart)')
-    labels = 'Hate Speech', 'Offensive Language', 'Neither'
-    sizes = df['class'].value_counts()
-    explode = (0, 0.1, 0)  # only "explode" the 2nd slice
-    fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-            shadow=True, startangle=90)
-    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    plt.title('Distribution of Classes')
-    st.pyplot(plt)
-
-
 # Horizontal line separator
 st.markdown("---")
 ##################################################################################
