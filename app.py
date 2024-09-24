@@ -81,7 +81,6 @@ elif selected == "Previewing the Dataset":
     # Horizontal line separator
     st.markdown("---")
 
-    st.write("This is the about page.")
 elif selected == "About":
     st.title("About")
     st.write("This is the about page.")
