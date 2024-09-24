@@ -31,6 +31,16 @@ https://github.com/t-davidson/hate-speech-and-offensive-language
 # Horizontal line separator
 st.markdown("---")
 
+# Check for missing data
+st.header("Missing values in each column:")
+missing_data = df.isnull().sum()
+
+# Display the missing data
+st.write(missing_data)
+
+# Horizontal line separator
+st.markdown("---")
+
 # Create tabs
 tab1, tab2, tab3 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview"])
 
