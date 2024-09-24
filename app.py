@@ -32,13 +32,16 @@ if selected == "Home":
     the count of hate speech and offensive language identifications, and a class label indicating 
     the majority opinion: 0 for hate speech, 1 for offensive language, and 2 for neither.\n
     The dataset published in:\n
-    Davidson, T., Warmsley, D., Macy, M., & Weber, I. (2017, May). Automated hate speech detection and the problem of offensive language. In Proceedings of the international AAAI conference on web and social media (Vol. 11, No. 1, pp. 512-515).\n
+    Davidson, T., Warmsley, D., Macy, M., & Weber, I. (2017, May). Automated hate speech detection and the problem 
+    of offensive language. In Proceedings of the international AAAI conference on web and social media 
+    (Vol. 11, No. 1, pp. 512-515).\n
 
     The Dataset can be downloaded from:\n
-    https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset\n
+    https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset
+    \n
     https://github.com/t-davidson/hate-speech-and-offensive-language
+    
     """)
-    st.write("Welcome to the home page.")
 elif selected == "About":
     st.title("About")
     st.write("This is the about page.")
