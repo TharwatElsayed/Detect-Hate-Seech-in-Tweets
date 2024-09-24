@@ -34,7 +34,7 @@ st.markdown("---")
 
 
 # Create tabs
-tab1, tab2, tab3 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview", "Missing values"])
+tab1, tab2, tab3, tab4 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview", "Missing values"])
 
 # Tab 1: Dataset Brief Information
 with tab1:
