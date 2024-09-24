@@ -42,6 +42,8 @@ if selected == "Home":
     https://github.com/t-davidson/hate-speech-and-offensive-language
     
     """)
+    # Horizontal line separator
+    st.markdown("---")
 
 elif selected == "Previewing the Dataset":
     st.title("Loading and Previewing the Dataset")
