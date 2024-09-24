@@ -99,13 +99,7 @@ elif chart_type == 'Pie Chart':
 
 # Horizontal line separator
 st.markdown("---")
-
-import streamlit as st
-import matplotlib.pyplot as plt
-
-# Horizontal line separator
-st.markdown("---")
-
+##################################################################################
 st.subheader('Understanding Class Distribution')
 
 # Create tabs
@@ -136,6 +130,7 @@ with tab2:
     plt.title('Distribution of Classes')
     st.pyplot(fig1)  # Pass the figure object instead of plt
     plt.clf()  # Clear the figure after using it
+####################################################################################
 
 # Horizontal line separator
 st.markdown("---")
