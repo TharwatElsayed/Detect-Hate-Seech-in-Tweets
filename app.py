@@ -15,7 +15,7 @@ st.title('Hate Speech and Offensive Language Analysis')
 with st.sidebar:
     selected = option_menu(
         menu_title="Main Menu",  # Title of the menu
-        options=["Home", "About", "Contact"],  # Menu options
+        options=["Home", "Previewing the Dataset","About", "Contact"],  # Menu options
         icons=["house", "info", "envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
@@ -42,6 +42,8 @@ if selected == "Home":
     https://github.com/t-davidson/hate-speech-and-offensive-language
     
     """)
+
+elif selected == "Previewing the Dataset":
 elif selected == "About":
     st.title("About")
     st.write("This is the about page.")
