@@ -5,6 +5,9 @@ import io
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+# Set the page layout to wide mode
+st.set_page_config(layout="wide")
+
 # Load the dataset
 df = pd.read_csv('labeled_data.csv')
 
