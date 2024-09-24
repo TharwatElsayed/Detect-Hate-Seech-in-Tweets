@@ -44,6 +44,8 @@ if selected == "Home":
     """)
 
 elif selected == "Previewing the Dataset":
+    st.title("About")
+    st.write("This is the about page.")
 elif selected == "About":
     st.title("About")
     st.write("This is the about page.")
