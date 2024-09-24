@@ -15,8 +15,8 @@ df = pd.read_csv('labeled_data.csv')
 with st.sidebar:
     selected = option_menu(
         menu_title="Hate Speech and Offensive Language Analysis",  # Title of the menu
-        options=["Home", "Previewing the Dataset", "Class Distribution", "About", "Contact"],  # Menu options
-        icons=["house", "","","info", "envelope"],  # Optional icons
+        options=["Home", "Previewing the Dataset", "Class Distribution", "Preprocessing", "About", "Contact"],  # Menu options
+        icons=["house", "","", "","info", "envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
         orientation="vertical"  # Set the orientation to vertical
@@ -112,6 +112,23 @@ elif selected == "Class Distribution":
         st.pyplot(fig1)  # Pass the figure object instead of plt
         plt.clf()  # Clear the figure after using it
 
+    # Horizontal line separator
+    st.markdown("---")
+
+elif selected == "Preprocessing":
+    st.title("Text Preprocessing")
+    # Create tabs
+    tab1, tab2 = st.tabs(["Tweets Before Preprocessing", "Tweets After Stemming"])
+
+    # Tab 1: Dataset Brief Information
+    with tab1:
+        st.subheader('Tweets (Before Preprocessing)')
+        st.write(df.tweet)
+ 
+    # Tab 2: Dataset Columns Description
+    with tab2:
+        st.subheader('Tweets (After Stemming)')
+        st.write(pd.read_csv('stemmed_tweets.csv'))
     # Horizontal line separator
     st.markdown("---")
 
