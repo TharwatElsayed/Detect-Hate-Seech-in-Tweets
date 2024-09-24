@@ -44,7 +44,41 @@ if selected == "Home":
     """)
 
 elif selected == "Previewing the Dataset":
-    st.title("About")
+    st.title("Loading and Previewing the Dataset")
+    # Create tabs
+    tab1, tab2, tab3, tab4 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview", "Missing values"])
+
+    # Tab 1: Dataset Brief Information
+    with tab1:
+        st.subheader('Dataset Information')
+
+        # Capture the df.info() output
+        buffer = io.StringIO()
+        df.info(buf=buffer)
+        s = buffer.getvalue()
+
+        # Display the info in Streamlit
+        st.text(s)
+
+    # Tab 2: Dataset Columns Description
+    with tab2:
+        st.subheader('Dataset Columns Description')
+        st.write(df.describe(include='all'))
+
+    # Tab 3: Dataset Overview
+    with tab3:
+        st.subheader('Dataset Overview (Before Preprocessing)')
+        st.write(df.head(10))
+
+    # Tab 4: Dataset Overview
+    with tab4:
+        # Check for missing data
+        st.subheader("Missing values in each column:")
+        st.write(df.isnull().sum())
+   
+    # Horizontal line separator
+    st.markdown("---")
+
     st.write("This is the about page.")
 elif selected == "About":
     st.title("About")
