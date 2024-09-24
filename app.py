@@ -114,7 +114,6 @@ elif selected == "Class Distribution":
 
     # Horizontal line separator
     st.markdown("---")
-        st.write("This is the about page.")
 
 elif selected == "About":
     st.title("About")
