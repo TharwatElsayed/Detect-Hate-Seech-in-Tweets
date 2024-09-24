@@ -16,7 +16,7 @@ with st.sidebar:
     selected = option_menu(
         menu_title="Main Menu",  # Title of the menu
         options=["Home", "Previewing the Dataset","About", "Contact"],  # Menu options
-        icons=["house", "info", "envelope"],  # Optional icons
+        icons=["house", "","info", "envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
         orientation="vertical"  # Set the orientation to vertical
