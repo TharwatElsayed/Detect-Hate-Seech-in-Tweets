@@ -31,14 +31,14 @@ https://github.com/t-davidson/hate-speech-and-offensive-language
 # Horizontal line separator
 st.markdown("---")
 
-
+st.subheader('Loading and Previewing the Dataset')
 
 # Create tabs
 tab1, tab2, tab3, tab4 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview", "Missing values"])
 
 # Tab 1: Dataset Brief Information
 with tab1:
-    st.subheader('Dataset Information')
+    st.subheader('Dataset Information)
 
     # Capture the df.info() output
     buffer = io.StringIO()
@@ -67,6 +67,8 @@ with tab4:
 
 # Horizontal line separator
 st.markdown("---")
+
+st.subheader('Understanding Class Distribution')
 
 # Create a radio button for chart selection
 chart_type = st.radio("Choose Chart Type", ('Bar Chart', 'Pie Chart'))
