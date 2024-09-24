@@ -32,7 +32,7 @@ https://github.com/t-davidson/hate-speech-and-offensive-language
 st.markdown("---")
 
 # Check for missing data
-st.header("Missing values in each column:")
+st.subheader("Missing values in each column:")
 missing_data = df.isnull().sum()
 
 # Display the missing data
