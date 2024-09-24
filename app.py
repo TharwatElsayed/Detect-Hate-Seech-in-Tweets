@@ -99,17 +99,7 @@ elif chart_type == 'Pie Chart':
 # Horizontal line separator
 st.markdown("---")
 
-#st.subheader('Tweets (Before Preprocessing)')
-#st.write(df.tweet)
-
-# Horizontal line separator
-#st.markdown("---")
-
-# Load the stemmed_tweets
-#df_stemmed = pd.read_csv('stemmed_tweets.csv')
-#st.subheader('Tweets (After Stemming)')
-#st.write(df_stemmed)
-
+st.subheader('Text Preprocessing')
 
 # Create tabs
 tab1, tab2 = st.tabs(["Tweets Before Preprocessing", "Tweets After Stemming"])
