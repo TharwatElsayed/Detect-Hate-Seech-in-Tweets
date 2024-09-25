@@ -198,7 +198,6 @@ elif selected == "Model Selection":
         df_results = pd.DataFrame(data)
 
         # Display the table in Streamlit
-        st.subheader('Table I. Classification Results')
         st.table(df_results)
         # Horizontal line separator
         st.markdown("---")
