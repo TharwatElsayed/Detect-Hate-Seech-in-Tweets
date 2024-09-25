@@ -122,12 +122,13 @@ elif selected == "Tweets Preprocessing":
     st.title("Dataset Preprocessing")
 
     st.write("""
-    we use slight pre-processing to normalize its content:
-
-delete the characters outlined here (— : , ;	! ?).
-Normalize hashtags into words, thus ’refugeesnotwelcome’ becomes ’refugees not welcome’. This is due to the fact that such hashtags are frequently employed when creating phrases. We separate such hashtags using a dictionary-based lookup.
-To eliminate word inflections, use lowercase to remove capital letters and stemming to overcome the problem of several forms of words. 
-Eliminate all tokens having a document frequency that is less than 5.
+    We used slight pre-processing to normalize the tweets content by:
+    A) Delete the characters outlined here (— : , ;	! ?).
+    B) Normalize hashtags into words, thus ’refugeesnotwelcome’ becomes ’refugees not welcome’.
+       This is due to the fact that such hashtags are frequently employed when creating phrases. 
+    C) We separate such hashtags using a dictionary-based lookup.
+    D) To eliminate word inflections, use lowercase to remove capital letters and stemming to overcome the problem of several forms of words.
+    E) Encode the tweets into integers and pad each tweet to the max length of 100 words.
 
     """)
     # Horizontal line separator
