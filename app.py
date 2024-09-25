@@ -181,7 +181,35 @@ elif selected == "Model Selection":
     used value of C in SVM is 1.0.""")
     # Horizontal line separator
     st.markdown("---")
+    tab1, tab2 = st.tabs(["Classification Results", "222"])
+    # Tab 3: Dataset Columns Description
+    with tab1:
+        st.subheader('Table I. Classification Results')
+        # Define the data for the table
+        data = {
+        'Algorithm': ['Logistic Regression', 'Decision Tree', 'Random Forest', 
+                      'Naive Bayes', 'K-Nearest Neighbor', 'SVM - SVC'],
+        'Precision': ['0.83 ± 0.04', '0.77 ± 0.06', '0.77 ± 0.06', '0.71 ± 0.07', '0.79 ± 0.05', '0.78 ± 0.05'],
+        'Recall': ['0.96 ± 0.02', '1.00 ± 0.01', '1.00 ± 0.01', '0.96 ± 0.02', '0.90 ± 0.03', '1.00 ± 0.01'],
+        'F1-Score': ['0.88 ± 0.02', '0.87 ± 0.03', '0.87 ± 0.03', '0.81 ± 0.04', '0.84 ± 0.04', '0.87 ± 0.03']
+        }
 
+        # Convert the data to a pandas DataFrame
+        df_results = pd.DataFrame(data)
+
+        # Display the table in Streamlit
+        st.subheader('Table I. Classification Results')
+        st.table(df_results)
+        # Horizontal line separator
+        st.markdown("---")
+
+    # Tab 3: Dataset Columns Description
+    with tab2:
+        st.subheader('Tweets After Tokenization')
+        st.write("")
+        # Horizontal line separator
+        st.markdown("---")
+ 
 elif selected == "About":
     st.title("About")
     st.write("This is the about page.")
