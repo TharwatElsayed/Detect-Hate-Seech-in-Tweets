@@ -121,7 +121,7 @@ elif selected == "Class Distribution":
 elif selected == "Preprocessing":
     st.title("Dataset Preprocessing")
     # Create tabs
-    tab1, tab2, tab3 = st.tabs(["Tweets Before Preprocessing", "Cleaned Tweets", "Stemmed Tweets"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Tweets Before Preprocessing", "Cleaned Tweets", "Stemmed Tweets", "Tokenized Tweets"])
 
     # Tab 1: Dataset Brief Information
     with tab1:
@@ -134,10 +134,15 @@ elif selected == "Preprocessing":
         st.write(pd.read_csv('cleaned_tweets.csv'))
     # Horizontal line separator
 
-    # Tab 2: Dataset Columns Description
+    # Tab 3: Dataset Columns Description
     with tab3:
         st.subheader('Tweets After Stemming')
         st.write(pd.read_csv('stemmed_tweets.csv'))
+        
+    # Tab 3: Dataset Columns Description
+    with tab4:
+        st.subheader('Tweets After Tokenization')
+        st.write(pd.read_csv('Tokenized_Padded_tweets.csv'))
     
     # Horizontal line separator
     st.markdown("---")
