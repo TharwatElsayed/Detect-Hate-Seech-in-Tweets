@@ -18,7 +18,7 @@ df = pd.read_csv('labeled_data.csv')
 with st.sidebar:
     selected = option_menu(
         menu_title="Hate Speech and Offensive Language Analysis",  # Title of the menu
-        options=["Home", "Previewing the Dataset", "Class Distribution", "Preprocessing", "About", "Contact"],  # Menu options
+        options=["Home", "Tweets Dataset", "Tweets Classes", "Tweets Preprocessing", "About", "Contact"],  # Menu options
         icons=["house", "","", "","info", "envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
@@ -48,7 +48,7 @@ if selected == "Home":
     # Horizontal line separator
     st.markdown("---")
 
-elif selected == "Previewing the Dataset":
+elif selected == "Tweets Dataset":
     st.title("Loading and Previewing the Dataset")
     # Create tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview", "Missing values"])
@@ -84,7 +84,7 @@ elif selected == "Previewing the Dataset":
     # Horizontal line separator
     st.markdown("---")
 
-elif selected == "Class Distribution":
+elif selected == "Tweets Classes":
     st.title("Understanding Class Distribution")
     # Create tabs
     tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
@@ -118,7 +118,7 @@ elif selected == "Class Distribution":
     # Horizontal line separator
     st.markdown("---")
 
-elif selected == "Preprocessing":
+elif selected == "Tweets Preprocessing":
     st.title("Dataset Preprocessing")
     # Create tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Tweets Before Preprocessing", "Cleaned Tweets", "Stemmed Tweets", "Tokenized Tweets"])
