@@ -120,6 +120,10 @@ elif selected == "Tweets Classes":
 
 elif selected == "Tweets Preprocessing":
     st.title("Dataset Preprocessing")
+
+    # Horizontal line separator
+    st.markdown("---")
+
     # Create tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Tweets Before Preprocessing", "Cleaned Tweets", "Stemmed Tweets", "Tokenized Tweets"])
 
@@ -127,25 +131,29 @@ elif selected == "Tweets Preprocessing":
     with tab1:
         st.subheader('Tweets Before Preprocessing')
         st.write(df.tweet)
- 
+        # Horizontal line separator
+        st.markdown("---")
+
     # Tab 2: Dataset Columns Description
     with tab2:
         st.subheader('Tweets After Cleaning')
         st.write(pd.read_csv('cleaned_tweets.csv'))
-    # Horizontal line separator
+        # Horizontal line separator
+        st.markdown("---")
 
     # Tab 3: Dataset Columns Description
     with tab3:
         st.subheader('Tweets After Stemming')
         st.write(pd.read_csv('stemmed_tweets.csv'))
-        
+        # Horizontal line separator
+        st.markdown("---")
+
     # Tab 3: Dataset Columns Description
     with tab4:
         st.subheader('Tweets After Tokenization')
         st.write(pd.read_csv('Tokenized_Padded_tweets.csv'))
-    
-    # Horizontal line separator
-    st.markdown("---")
+        # Horizontal line separator
+        st.markdown("---")
 
 elif selected == "Model Selection":
     st.title("Model Selection")
