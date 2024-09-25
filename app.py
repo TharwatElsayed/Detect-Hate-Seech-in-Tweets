@@ -167,7 +167,18 @@ elif selected == "Tweets Preprocessing":
 
 elif selected == "Model Selection":
     st.title("Model Selection")
-    st.write("This is the Model Selection page.")
+    st.write("""
+    (Classifier training and testing): Ten-fold cross-validation was used to train 
+    and test all the six classifiers (logistic regression, decision tree, random forest, 
+    naive Bayes, k-nearest neighbors, and support vector machines). We utilized 
+    traditional machine learning methods provided by the Scikit-learn Python module 
+    for classification. The Logistic Regression class uses L2 regularization with 
+    a regularization parameter C equals 0.01. The hyper parameter used value of maximum depth 
+    in decision trees and random forest equals 2. The hyper parameter used value of k in 
+    k-nearest neighbors is 5, this means that the algorithm will consider the class or value of 
+    the 5 nearest neighbors, when making predictions. In naive Bayes there are no specific default 
+    values for this algorithm, as it does not require tuning hyper parameters. The hyper parameter 
+    used value of C in SVM is 1.0.""")
     # Horizontal line separator
     st.markdown("---")
 
