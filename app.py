@@ -181,8 +181,8 @@ elif selected == "Model Selection":
     used value of C in SVM is 1.0.""")
     # Horizontal line separator
     st.markdown("---")
-    tab1, tab2 = st.tabs(["Classification Results", "222"])
-    # Tab 3: Dataset Columns Description
+    tab1, tab2 = st.tabs(["Classification Results", "Display Results Figures"])
+    # Tab 3: Table I. Classification Results
     with tab1:
         st.subheader('Table I. Classification Results')
         # Define the data for the table
@@ -202,7 +202,7 @@ elif selected == "Model Selection":
         # Horizontal line separator
         st.markdown("---")
 
-    # Tab 3: Dataset Columns Description
+    # Tab 2: Display Results Figures
     with tab2:
         st.subheader('Tweets After Tokenization')
         # Data for the table
