@@ -205,8 +205,41 @@ elif selected == "Model Selection":
     # Tab 3: Dataset Columns Description
     with tab2:
         st.subheader('Tweets After Tokenization')
-        st.write("")
-        # Horizontal line separator
+        # Data for the table
+        data = {
+            'Algorithm': ['Logistic Regression', 'Decision Tree', 'Random Forest', 
+                          'Naive Bayes', 'K-Nearest Neighbor', 'SVM - SVC'],
+            'Precision': [0.83, 0.77, 0.77, 0.71, 0.79, 0.78],
+            'Recall': [0.96, 1.00, 1.00, 0.96, 0.90, 1.00],
+            'F1-Score': [0.88, 0.87, 0.87, 0.81, 0.84, 0.87]
+        }
+
+        # Convert the data to a pandas DataFrame (renaming it df_fig)
+        df_fig = pd.DataFrame(data)
+
+        # Create a grouped bar chart using Plotly
+        fig = go.Figure()
+
+        # Add Precision bars
+        fig.add_trace(go.Bar(x=df_fig['Algorithm'], y=df_fig['Precision'], name='Precision'))
+
+        # Add Recall bars
+        fig.add_trace(go.Bar(x=df_fig['Algorithm'], y=df_fig['Recall'], name='Recall'))
+
+        # Add F1-Score bars
+        fig.add_trace(go.Bar(x=df_fig['Algorithm'], y=df_fig['F1-Score'], name='F1-Score'))
+
+        # Update layout for grouped bars
+        fig.update_layout(
+            title='Classification Results',
+            xaxis_title='Algorithm',
+            yaxis_title='Score',
+            barmode='group',  # Group the bars side by side
+            xaxis_tickangle=-45
+        )
+
+        # Display the plot in Streamlit
+        st.plotly_chart(fig)
         st.markdown("---")
  
 elif selected == "About":
