@@ -70,12 +70,12 @@ elif selected == "Tweets Dataset":
         st.subheader('Dataset Columns Description')
         st.write(df.describe(include='all'))
 
-    # Tab 3: Dataset Overview
+    # Tab 3: Dataset Overview (Before Preprocessing)
     with tab3:
         st.subheader('Dataset Overview (Before Preprocessing)')
         st.write(df.head(10))
 
-    # Tab 4: Dataset Overview
+    # Tab 4: Check for missing data
     with tab4:
         # Check for missing data
         st.subheader("Missing values in each column:")
@@ -89,7 +89,7 @@ elif selected == "Tweets Classes":
     # Create tabs
     tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
 
-    # Tab 1: Dataset Brief Information
+    # Tab 1: Distribution of Classes (Bar Chart)
     with tab1:
         st.subheader('Distribution of Classes (Bar Chart)')
         plt.figure(figsize=(8, 6))
@@ -101,7 +101,7 @@ elif selected == "Tweets Classes":
         st.pyplot(plt)
         plt.clf()  # Clear the figure after using it to prevent overlap
  
-    # Tab 2: Dataset Columns Description
+    # Tab 2: Proportion of Classes (Pie Chart)
     with tab2:
         st.subheader('Proportion of Classes (Pie Chart)')
         labels = ['Hate Speech', 'Offensive Language', 'Neither']
@@ -137,28 +137,28 @@ elif selected == "Tweets Preprocessing":
     # Create tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Tweets Before Preprocessing", "Cleaned Tweets", "Stemmed Tweets", "Tokenized Tweets"])
 
-    # Tab 1: Dataset Brief Information
+    # Tab 1: Tweets Before Preprocessing
     with tab1:
         st.subheader('Tweets Before Preprocessing')
         st.write(df.tweet)
         # Horizontal line separator
         st.markdown("---")
 
-    # Tab 2: Dataset Columns Description
+    # Tab 2: Tweets After Cleaning
     with tab2:
         st.subheader('Tweets After Cleaning')
         st.write(pd.read_csv('cleaned_tweets.csv'))
         # Horizontal line separator
         st.markdown("---")
 
-    # Tab 3: Dataset Columns Description
+    # Tab 3: Tweets After Stemming
     with tab3:
         st.subheader('Tweets After Stemming')
         st.write(pd.read_csv('stemmed_tweets.csv'))
         # Horizontal line separator
         st.markdown("---")
 
-    # Tab 3: Dataset Columns Description
+    # Tab 4: Tweets After Tokenization
     with tab4:
         st.subheader('Tweets After Tokenization')
         st.write(pd.read_csv('Tokenized_Padded_tweets.csv'))
@@ -204,7 +204,7 @@ elif selected == "Model Selection":
 
     # Tab 2: Display Results Figures
     with tab2:
-        st.subheader('Tweets After Tokenization')
+        st.subheader('Display Results Figures')
         # Data for the table
         data = {
             'Algorithm': ['Logistic Regression', 'Decision Tree', 'Random Forest', 
