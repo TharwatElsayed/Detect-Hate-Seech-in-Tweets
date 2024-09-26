@@ -87,35 +87,63 @@ elif selected == "Tweets Dataset":
 
 elif selected == "Tweets Classes":
     st.title("Understanding Class Distribution")
-    # Create tabs
-    tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
+   # Sample Data (replace this with your actual DataFrame)
+# Ensure 'class' is in your DataFrame (0: Hate Speech, 1: Offensive Language, 2: Neither)
+data = {'class': [0, 1, 2, 0, 1, 2, 1, 1, 0, 2, 0, 1, 0, 2, 1]}  # Example data
+df_fig = pd.DataFrame(data)
 
-    # Tab 1: Distribution of Classes (Bar Chart)
-    with tab1:
-        st.subheader('Distribution of Classes (Bar Chart)')
-        plt.figure(figsize=(8, 6))
-        plt.hist(df['class'], bins=3, edgecolor='black')
-        plt.xlabel('Class')
-        plt.ylabel('Frequency')
-        plt.title('Distribution of Classes')
-        plt.xticks([0, 1, 2], ['Hate Speech', 'Offensive Language', 'Neither'])
-        st.pyplot(plt)
-        plt.clf()  # Clear the figure after using it to prevent overlap
- 
-    # Tab 2: Proportion of Classes (Pie Chart)
-    with tab2:
-        st.subheader('Proportion of Classes (Pie Chart)')
-        labels = ['Hate Speech', 'Offensive Language', 'Neither']
-        sizes = df['class'].value_counts().reindex([0, 1, 2])  # Ensure correct order
-        explode = (0, 0.1, 0)  # only "explode" the 2nd slice
-        fig1, ax1 = plt.subplots()
-        ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-                shadow=True, startangle=90)
-        ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-        plt.title('Distribution of Classes')
-        st.pyplot(fig1)  # Pass the figure object instead of plt
-        plt.clf()  # Clear the figure after using it
+# Class labels
+class_labels = ['Hate Speech', 'Offensive Language', 'Neither']
 
+# Title of the app
+st.title("Understanding Class Distribution")
+
+# Create tabs
+tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
+
+# Tab 1: Distribution of Classes (Bar Chart)
+with tab1:
+    st.subheader('Distribution of Classes (Bar Chart)')
+    
+    # Count occurrences of each class
+    class_counts = df_fig['class'].value_counts().reindex([0, 1, 2], fill_value=0)
+
+    # Create a bar chart using Plotly
+    bar_fig = px.bar(
+        x=class_labels, 
+        y=class_counts.values, 
+        labels={'x': 'Class', 'y': 'Frequency'}, 
+        title='Distribution of Classes',
+        color=class_labels,
+    )
+    
+    # Show the bar chart
+    st.plotly_chart(bar_fig)
+
+# Tab 2: Proportion of Classes (Pie Chart)
+with tab2:
+    st.subheader('Proportion of Classes (Pie Chart)')
+    
+    # Create a pie chart using Plotly
+    pie_fig = go.Figure(
+        data=[go.Pie(
+            labels=class_labels, 
+            values=class_counts.values, 
+            hole=0.3,  # Make it a donut chart for style
+            pull=[0, 0.1, 0],  # Pull out the second slice slightly
+            marker=dict(colors=['#FF6347', '#FFD700', '#90EE90']),
+            textinfo='label+percent', 
+            hoverinfo='label+value'
+        )]
+    )
+    
+    pie_fig.update_layout(
+        title_text="Distribution of Classes (Pie Chart)",
+        showlegend=True
+    )
+    
+    # Show the pie chart
+    st.plotly_chart(pie_fig)
     # Horizontal line separator
     st.markdown("---")
 
