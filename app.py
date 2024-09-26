@@ -19,8 +19,8 @@ df = pd.read_csv('labeled_data.csv')
 with st.sidebar:
     selected = option_menu(
         menu_title="Hate Speech and Offensive Language Analysis",  # Title of the menu
-        options=["Home", "Tweets Dataset", "Tweets Classes", "Tweets Preprocessing", "Model Selection", "About", "Contact"],  # Menu options
-        icons=["house","","","","","info","envelope"],  # Optional icons
+        options=["Home", "Tweets Dataset", "Tweets Classes", "Tweets Preprocessing", "Model Selection", "Try The Model", "About", "Contact"],  # Menu options
+        icons=["house","","","","","","info","envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
         orientation="vertical"  # Set the orientation to vertical
@@ -288,6 +288,12 @@ elif selected == "Model Selection":
     # Horizontal line separator
     st.markdown("---")
  
+elif selected == "Try The Model":
+    st.title("Try The Logistic Regression Model")
+    st.write("This is the model page.")
+    # Horizontal line separator
+    st.markdown("---")
+    
 elif selected == "About":
     st.title("About")
     st.write("This is the about page.")
