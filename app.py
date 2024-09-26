@@ -87,65 +87,65 @@ elif selected == "Tweets Dataset":
 
 elif selected == "Tweets Classes":
     st.title("Understanding Class Distribution")
-   # Sample Data (replace this with your actual DataFrame)
-# Ensure 'class' is in your DataFrame (0: Hate Speech, 1: Offensive Language, 2: Neither)
-data = {'class': [0, 1, 2, 0, 1, 2, 1, 1, 0, 2, 0, 1, 0, 2, 1]}  # Example data
-df_fig = pd.DataFrame(data)
+    # Sample Data (replace this with your actual DataFrame)
+    # Ensure 'class' is in your DataFrame (0: Hate Speech, 1: Offensive Language, 2: Neither)
+    data = {'class': [0, 1, 2, 0, 1, 2, 1, 1, 0, 2, 0, 1, 0, 2, 1]}  # Example data
+    df_fig = pd.DataFrame(data)
 
-# Class labels
-class_labels = ['Hate Speech', 'Offensive Language', 'Neither']
+    # Class labels
+    class_labels = ['Hate Speech', 'Offensive Language', 'Neither']
 
-# Title of the app
-st.title("Understanding Class Distribution")
+    # Title of the app
+    st.title("Understanding Class Distribution")
 
-# Create tabs
-tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
+    # Create tabs
+    tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
 
-# Tab 1: Distribution of Classes (Bar Chart)
-with tab1:
-    st.subheader('Distribution of Classes (Bar Chart)')
+    # Tab 1: Distribution of Classes (Bar Chart)
+    with tab1:
+        st.subheader('Distribution of Classes (Bar Chart)')
     
-    # Count occurrences of each class
-    class_counts = df_fig['class'].value_counts().reindex([0, 1, 2], fill_value=0)
+        # Count occurrences of each class
+        class_counts = df_fig['class'].value_counts().reindex([0, 1, 2], fill_value=0)
 
-    # Create a bar chart using Plotly
-    bar_fig = px.bar(
-        x=class_labels, 
-        y=class_counts.values, 
-        labels={'x': 'Class', 'y': 'Frequency'}, 
-        title='Distribution of Classes',
-        color=class_labels,
-    )
+        # Create a bar chart using Plotly
+        bar_fig = px.bar(
+            x=class_labels, 
+            y=class_counts.values, 
+            labels={'x': 'Class', 'y': 'Frequency'}, 
+            title='Distribution of Classes',
+            color=class_labels,
+        )
     
-    # Show the bar chart
-    st.plotly_chart(bar_fig)
+        # Show the bar chart
+        st.plotly_chart(bar_fig)
 
-# Tab 2: Proportion of Classes (Pie Chart)
-with tab2:
-    st.subheader('Proportion of Classes (Pie Chart)')
+    # Tab 2: Proportion of Classes (Pie Chart)
+    with tab2:
+        st.subheader('Proportion of Classes (Pie Chart)')
     
-    # Create a pie chart using Plotly
-    pie_fig = go.Figure(
-        data=[go.Pie(
-            labels=class_labels, 
-            values=class_counts.values, 
-            hole=0.3,  # Make it a donut chart for style
-            pull=[0, 0.1, 0],  # Pull out the second slice slightly
-            marker=dict(colors=['#FF6347', '#FFD700', '#90EE90']),
-            textinfo='label+percent', 
-            hoverinfo='label+value'
-        )]
-    )
+        # Create a pie chart using Plotly
+        pie_fig = go.Figure(
+            data=[go.Pie(
+                labels=class_labels, 
+                values=class_counts.values, 
+                hole=0.3,  # Make it a donut chart for style
+                pull=[0, 0.1, 0],  # Pull out the second slice slightly
+                marker=dict(colors=['#FF6347', '#FFD700', '#90EE90']),
+                textinfo='label+percent', 
+                hoverinfo='label+value'
+            )]
+        )
     
-    pie_fig.update_layout(
-        title_text="Distribution of Classes (Pie Chart)",
-        showlegend=True
-    )
+        pie_fig.update_layout(
+            title_text="Distribution of Classes (Pie Chart)",
+            showlegend=True
+        )
     
-    # Show the pie chart
-    st.plotly_chart(pie_fig)
-    # Horizontal line separator
-    st.markdown("---")
+        # Show the pie chart
+        st.plotly_chart(pie_fig)
+        # Horizontal line separator
+        st.markdown("---")
 
 elif selected == "Tweets Preprocessing":
     st.title("Dataset Preprocessing")
