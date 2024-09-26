@@ -238,10 +238,27 @@ elif selected == "Model Selection":
             barmode='group',  # Group the bars side by side
             xaxis_tickangle=-45
         )
-
         # Display the plot in Streamlit
         st.plotly_chart(fig)
         st.markdown("---")
+
+    st.title("Results Clarifaction")
+    st.write("""
+    Looking at the results, it appears that the Decision Tree, Random Forest, 
+    and SVM - SVC classifiers have the highest recall scores of 1.00 ± 0.01, 
+    indicating that they are able to correctly identify all positive instances. 
+    However, it's important to note that the precision scores for these classifiers 
+    are slightly lower compared to Logistic Regression and K-Nearest Neighbor. 
+    But, based on the evaluation metrics for hate speech detection in NLP, 
+    the best classifier can be determined by considering the F1-score, 
+    which is a measure of the model's overall performance. By looking at the F1-scores, 
+    Logistic Regression has the highest F1-score of 0.88 ± 0.02, followed closely by 
+    Decision Tree, Random Forest, and SVM - SVC, all with F1-scores of 0.87 ± 0.03. 
+    Therefore, based on the F1-scores, Logistic Regression appears to be the best 
+    classifier for hate speech detection in NLP. In addition, Logistic Regression has 
+    the highest precision score of 0.83 ± 0.04. It also has a relatively high recall.""")
+    # Horizontal line separator
+    st.markdown("---")
  
 elif selected == "About":
     st.title("About")
