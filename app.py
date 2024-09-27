@@ -414,8 +414,7 @@ elif selected == "Contact":
     st.title("Contact Me")
     
     st.write("""
-    I’m Tharwat El-Sayed Ismail, (Data Scientist - AI Developer)
-I am a Data Scientist with expertise in statistical analysis, machine learning (ML), and data visualization, I bring a wealth of experience in Python, adept at extracting actionable insights to inform strategic decisions and effectively solve real-world problems. Additionally, I am an AI Developer proficient in Python, TensorFlow, and PyTorch, specialized in creating scalable AI solutions to drive business growth and enhance user experiences. Highly skilled in machine learning, natural language processing (NLP).
+    I’m Tharwat El-Sayed Ismail, (Data Scientist - AI Developer) I am a Data Scientist with expertise in statistical analysis, machine learning (ML), and data visualization, I bring a wealth of experience in Python, adept at extracting actionable insights to inform strategic decisions and effectively solve real-world problems. Additionally, I am an AI Developer proficient in Python, TensorFlow, and PyTorch, specialized in creating scalable AI solutions to drive business growth and enhance user experiences. Highly skilled in machine learning, natural language processing (NLP).
     
     **Contact Information:**
     
