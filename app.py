@@ -379,17 +379,21 @@ elif selected == "Try The Model":
         with open('SVM_model.pkl', 'rb') as f:
             SVM_model = pickle.load(f)
 
-        # Predict sentiment/class
-        y_pred = LR_model.predict(padded_docs)      
-        # Display prediction result
-        st.write(f"By Using Logistic Regression")
-        st.write(f"Prediction: {label_map[y_pred[0]]}")
-        st.write(f"Prediction: {y_pred}")
+        # Horizontal line separator
+        st.markdown("---")
         st.write(f"preprocessed_tweet: {preprocessed_tweet}")
         st.write(f"Cleaned_tweet: {clean_tweet}")
         st.write(f"Stripped_tweet: {stripped_tweet}")
         st.write(f"Stemmed_tweet: {stemmed_tweet}")
         st.write(f"Tokenized_padded_docs: {padded_docs}")
+        # Horizontal line separator
+        st.markdown("---")
+        # Predict sentiment/class
+        y_pred = LR_model.predict(padded_docs)      
+        # Display prediction result
+        st.write(f"By Using Logistic Regression")
+        st.write(f"Prediction: {label_map[y_pred[0]]}")
+        st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
         st.markdown("---")
             
@@ -398,12 +402,7 @@ elif selected == "Try The Model":
         # Display prediction result
         st.write(f"By Using Decision Tree")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
-        st.write(f"Prediction: {y_pred}")
-        st.write(f"preprocessed_tweet: {preprocessed_tweet}")
-        st.write(f"Cleaned_tweet: {clean_tweet}")
-        st.write(f"Stripped_tweet: {stripped_tweet}")
-        st.write(f"Stemmed_tweet: {stemmed_tweet}")
-        st.write(f"Tokenized_padded_docs: {padded_docs}")
+        st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
         st.markdown("---")
         # Predict sentiment/class
@@ -411,12 +410,7 @@ elif selected == "Try The Model":
         # Display prediction result
         st.write(f"By Using Random Forest")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
-        st.write(f"Prediction: {y_pred}")
-        st.write(f"preprocessed_tweet: {preprocessed_tweet}")
-        st.write(f"Cleaned_tweet: {clean_tweet}")
-        st.write(f"Stripped_tweet: {stripped_tweet}")
-        st.write(f"Stemmed_tweet: {stemmed_tweet}")
-        st.write(f"Tokenized_padded_docs: {padded_docs}")
+        st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
         st.markdown("---")
         # Predict sentiment/class
@@ -424,12 +418,7 @@ elif selected == "Try The Model":
         # Display prediction result
         st.write(f"By Using SVM-SVC")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
-        st.write(f"Prediction: {y_pred}")
-        st.write(f"preprocessed_tweet: {preprocessed_tweet}")
-        st.write(f"Cleaned_tweet: {clean_tweet}")
-        st.write(f"Stripped_tweet: {stripped_tweet}")
-        st.write(f"Stemmed_tweet: {stemmed_tweet}")
-        st.write(f"Tokenized_padded_docs: {padded_docs}")
+        st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
         st.markdown("---")
     
