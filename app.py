@@ -363,26 +363,40 @@ elif selected == "Try The Model":
         # Map the prediction to a human-readable label
         label_map = {0: 'Hate Speech', 1: 'Offensive Language', 2: 'Neither'}
             
-        # Load the pre-trained model
+        # Load the pre-trained Logistic Regression model
         with open('LR_model.pkl', 'rb') as f:
             LR_model = pickle.load(f)
 
-        # Load the pre-trained model
+        # Load the pre-trained Decision Tree model
         with open('LR_model.pkl', 'rb') as f:
             LR_model = pickle.load(f)
 
-        # Load the pre-trained model
+        # Load the pre-trained Random Forest model
         with open('LR_model.pkl', 'rb') as f:
             LR_model = pickle.load(f)
 
-        # Load the pre-trained model
+        # Load the pre-trained SVM - SVC model
         with open('LR_model.pkl', 'rb') as f:
             LR_model = pickle.load(f)
 
         # Predict sentiment/class
         y_pred = LR_model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using Logistic")
+        st.write(f"By Using Logistic Regression")
+        st.write(f"Prediction: {label_map[y_pred[0]]}")
+        st.write(f"Prediction: {y_pred}")
+        st.write(f"preprocessed_tweet: {preprocessed_tweet}")
+        st.write(f"Cleaned_tweet: {clean_tweet}")
+        st.write(f"Stripped_tweet: {stripped_tweet}")
+        st.write(f"Stemmed_tweet: {stemmed_tweet}")
+        st.write(f"Tokenized_padded_docs: {padded_docs}")
+        # Horizontal line separator
+        st.markdown("---")
+            
+        # Predict sentiment/class
+        y_pred = LR_model.predict(padded_docs)      
+        # Display prediction result
+        st.write(f"By Using Decision Tree")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction: {y_pred}")
         st.write(f"preprocessed_tweet: {preprocessed_tweet}")
@@ -395,7 +409,7 @@ elif selected == "Try The Model":
         # Predict sentiment/class
         y_pred = LR_model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using Logistic")
+        st.write(f"By Using Random Forest")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction: {y_pred}")
         st.write(f"preprocessed_tweet: {preprocessed_tweet}")
@@ -408,20 +422,7 @@ elif selected == "Try The Model":
         # Predict sentiment/class
         y_pred = LR_model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using Logistic")
-        st.write(f"Prediction: {label_map[y_pred[0]]}")
-        st.write(f"Prediction: {y_pred}")
-        st.write(f"preprocessed_tweet: {preprocessed_tweet}")
-        st.write(f"Cleaned_tweet: {clean_tweet}")
-        st.write(f"Stripped_tweet: {stripped_tweet}")
-        st.write(f"Stemmed_tweet: {stemmed_tweet}")
-        st.write(f"Tokenized_padded_docs: {padded_docs}")
-        # Horizontal line separator
-        st.markdown("---")
-        # Predict sentiment/class
-        y_pred = LR_model.predict(padded_docs)      
-        # Display prediction result
-        st.write(f"By Using Logistic")
+        st.write(f"By Using SVM-SVC")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction: {y_pred}")
         st.write(f"preprocessed_tweet: {preprocessed_tweet}")
