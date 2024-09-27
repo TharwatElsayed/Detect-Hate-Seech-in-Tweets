@@ -391,7 +391,7 @@ elif selected == "Try The Model":
         # Predict sentiment/class
         y_pred = LR_model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using Logistic Regression")
+        st.write(f"By Using Logistic Regression algorithm")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
@@ -400,7 +400,7 @@ elif selected == "Try The Model":
         # Predict sentiment/class
         y_pred = Random_Forest_Model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using Decision Tree")
+        st.write(f"By Using Decision Tree algorithm")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
@@ -408,7 +408,7 @@ elif selected == "Try The Model":
         # Predict sentiment/class
         y_pred = Decision_Tree_Model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using Random Forest")
+        st.write(f"By Using Random Forest algorithm")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
@@ -416,7 +416,7 @@ elif selected == "Try The Model":
         # Predict sentiment/class
         y_pred = SVM_model.predict(padded_docs)      
         # Display prediction result
-        st.write(f"By Using SVM-SVC")
+        st.write(f"By Using SVM-SVC algorithm")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
         st.write(f"Prediction_class: {y_pred}")
         # Horizontal line separator
