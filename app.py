@@ -342,7 +342,7 @@ elif selected == "Model Selection":
 elif selected == "Try The Model":
     st.title("Tweet Sentiment/Class Prediction")
     # Input box for entering the tweet
-    user_input = st.text_area("Enter the tweet:", "I love this!")
+    user_input = st.text_area("Enter the tweet:", "#_ I AM a Happy Boy")
 
     # Button to trigger prediction
     if st.button('Predict'):
