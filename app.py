@@ -71,7 +71,7 @@ with st.sidebar:
     selected = option_menu(
         menu_title="Hate Speech and Offensive Language Analysis",  # Title of the menu
         options=["Home", "Tweets Dataset", "Tweets Classes", "Tweets Preprocessing", "Model Selection", "Try The Model", "About", "Contact"],  # Menu options
-        icons=["house","list", "graph-up", "gear", "cloud", "briefcase","info","envelope"],  # Optional icons
+        icons=["house","cloud", "bar", "gear", "graph-up", "briefcase","info","envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
         orientation="vertical"  # Set the orientation to vertical
