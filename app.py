@@ -376,8 +376,8 @@ elif selected == "Try The Model":
             Decision_Tree_Model = pickle.load(f)
 
         # Load the pre-trained SVM - SVC model
-        with open('LR_model.pkl', 'rb') as f:
-            LR_model = pickle.load(f)
+        with open('SVM_model.pkl', 'rb') as f:
+            SVM_model = pickle.load(f)
 
         # Predict sentiment/class
         y_pred = LR_model.predict(padded_docs)      
@@ -420,7 +420,7 @@ elif selected == "Try The Model":
         # Horizontal line separator
         st.markdown("---")
         # Predict sentiment/class
-        y_pred = LR_model.predict(padded_docs)      
+        y_pred = SVM_model.predict(padded_docs)      
         # Display prediction result
         st.write(f"By Using SVM-SVC")
         st.write(f"Prediction: {label_map[y_pred[0]]}")
