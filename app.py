@@ -380,25 +380,31 @@ elif selected == "Try The Model":
         # Horizontal line separator
         st.markdown("---")
     
-elif selected == "Contact":
-    st.title("Contact Us")
+elif selected == "About":
+    st.title("About This App")
     
     st.write("""
-    We would love to hear your feedback, suggestions, or answer any queries you might have regarding the application.
+    This application is designed for the analysis of hate speech and offensive language in tweets. 
+    It provides several functionalities, including:
     
-    **Contact Information:**
+    - Loading and exploring the dataset
+    - Understanding class distribution of hate speech, offensive language, and neutral content
+    - Preprocessing tweets (removing URLs, mentions, emojis, and special characters)
+    - Tokenizing and padding tweet sequences for machine learning models
+    - Model selection and classification of tweets using traditional machine learning classifiers
+    - Testing a trained model for real-time predictions of tweet sentiment or class
     
-    - **Email:** support@sentimentanalysis.com
-    - **Phone:** +123 456 7890
-    - **Address:** 123 Sentiment Analysis Street, Data City, ML 56789
+    **Key Features:**
     
-    You can also reach out to us through our social media channels:
+    - Utilizes a crowdsourced dataset from Davidson et al. (2017)
+    - Supports preprocessing steps like stemming and tokenization
+    - Provides an interactive interface for exploring dataset attributes, class distributions, and preprocessing steps
+    - Enables users to test machine learning models on custom tweets
     
-    - [LinkedIn](https://www.linkedin.com)
-    - [Twitter](https://twitter.com)
-    - [GitHub](https://github.com)
+    **References:**
     
-    Thank you for using our Hate Speech and Offensive Language Analysis app!
+    - Dataset Source: Davidson, T., Warmsley, D., Macy, M., & Weber, I. (2017). Automated hate speech detection and the problem of offensive language.
+    - Available on Kaggle: https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset
     """)
     
     # Horizontal line separator
@@ -414,7 +420,7 @@ elif selected == "Contact":
     **Contact Information:**
     
     - **Email:** tharwat_uss89@hotmail.com
-    - **LinkedIn:** [Tharwat El-Sayed](https://www.linkedin.com/in/tharwat-el-sayed-706276b1/)
+    - **LinkedIn:** [Tharwat El-Sayed](www.linkedin.com/in/tharwat-el-sayed-706276b1/)
     - **Portfolio:** [View My Work](https://linktr.ee/tharwat.elsayed)
     
     I look forward to connecting with you!
