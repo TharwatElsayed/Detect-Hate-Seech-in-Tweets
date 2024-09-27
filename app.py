@@ -377,18 +377,49 @@ elif selected == "Try The Model":
         st.write(f"Stripped_tweet: {stripped_tweet}")
         st.write(f"Stemmed_tweet: {stemmed_tweet}")
         st.write(f"Tokenized_padded_docs: {padded_docs}")
-        st.write("This is the model page.")
         # Horizontal line separator
         st.markdown("---")
     
-elif selected == "About":
-    st.title("About")
-    st.write("This is the about page.")
+elif selected == "Contact":
+    st.title("Contact Us")
+    
+    st.write("""
+    We would love to hear your feedback, suggestions, or answer any queries you might have regarding the application.
+    
+    **Contact Information:**
+    
+    - **Email:** support@sentimentanalysis.com
+    - **Phone:** +123 456 7890
+    - **Address:** 123 Sentiment Analysis Street, Data City, ML 56789
+    
+    You can also reach out to us through our social media channels:
+    
+    - [LinkedIn](https://www.linkedin.com)
+    - [Twitter](https://twitter.com)
+    - [GitHub](https://github.com)
+    
+    Thank you for using our Hate Speech and Offensive Language Analysis app!
+    """)
+    
     # Horizontal line separator
     st.markdown("---")
 
 elif selected == "Contact":
-    st.title("Contact")
-    st.write("This is the contact page.")
+    st.title("Contact Me")
+    
+    st.write("""
+    I’m Tharwat El-Sayed Ismail, a researcher specializing in Federated Learning, Deep Neural Networks, Blockchain, and Hate Speech Detection. 
+    If you have any inquiries about my work, research collaborations, or consulting opportunities, feel free to reach out.
+    
+    **Contact Information:**
+    
+    - **Email:** tharwat_uss89@hotmail.com
+    - **LinkedIn:** [Tharwat El-Sayed](https://www.linkedin.com/in/tharwat-el-sayed-706276b1/)
+    - **Portfolio:** [View My Work](https://linktr.ee/tharwat.elsayed)
+    
+    I look forward to connecting with you!
+    """)
+    
     # Horizontal line separator
     st.markdown("---")
+
