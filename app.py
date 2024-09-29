@@ -70,7 +70,7 @@ df = pd.read_csv('labeled_data.csv')
 with st.sidebar:
     selected = option_menu(
         menu_title="Hate Speech and Offensive Language Analysis",  # Title of the menu
-        options=["Data Acquisition", "Data Exploration", "Data Classes Balance", "Data Preparation", "ML Model Selection", "Try The Model", "About", "Contact"],  # Menu options
+        options=["Data Acquisition", "Data Exploration", "Data Classes Balancing", "Data Preparation", "ML Model Selection", "Try The Model", "About", "Contact"],  # Menu options
         icons=["house","cloud", "list", "gear", "graph-up", "briefcase","info","envelope"],  # Optional icons
         menu_icon="cast",  # Icon for the menu title
         default_index=0,  # Default selected option
@@ -136,7 +136,7 @@ elif selected == "Data Exploration":
     # Horizontal line separator
     st.markdown("---")
 
-elif selected == "Data Classes Balance":
+elif selected == "Data Classes Balancing":
     st.title("Understanding Class Distribution")
     # Sample Data (replace this with your actual DataFrame)
     # Ensure 'class' is in your DataFrame (0: Hate Speech, 1: Offensive Language, 2: Neither)
@@ -145,9 +145,6 @@ elif selected == "Data Classes Balance":
 
     # Class labels
     class_labels = ['Hate Speech', 'Offensive Language', 'Neither']
-
-    # Title of the app
-    st.title("Understanding Class Distribution")
 
     # Create tabs
     tab1, tab2 = st.tabs(["Bar Chart", "Pie Chart"])
