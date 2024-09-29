@@ -120,7 +120,7 @@ elif selected == "Data Exploration":
     # Tab 2: Dataset Columns Description
     with tab2:
         st.subheader('Dataset Columns Description')
-        st.write(df.describe(include='all'))
+        st.write(df.describe(include='O'))
 
     # Tab 3: Dataset Overview (Before Preprocessing)
     with tab3:
