@@ -78,7 +78,7 @@ with st.sidebar:
     )
 
 # Display content based on selected tab
-if selected == "Home":
+if selected == "Data Acquisition":
     st.title("Introduction")
     st.write("""This dataset contains data related to hate speech and offensive language. 
     Davidson introduced a dataset of tweets categorized using a crowdsourced hate speech vocabulary. 
@@ -100,7 +100,7 @@ if selected == "Home":
     # Horizontal line separator
     st.markdown("---")
 
-elif selected == "Tweets Dataset":
+elif selected == "Data Exploration":
     st.title("Loading and Previewing the Dataset")
     # Create tabs
     tab1, tab2, tab3, tab4 = st.tabs(["Dataset Information", "Dataset Description", "Dataset Overview", "Missing values"])
@@ -136,7 +136,7 @@ elif selected == "Tweets Dataset":
     # Horizontal line separator
     st.markdown("---")
 
-elif selected == "Tweets Classes":
+elif selected == "Data Classes Balance":
     st.title("Understanding Class Distribution")
     # Sample Data (replace this with your actual DataFrame)
     # Ensure 'class' is in your DataFrame (0: Hate Speech, 1: Offensive Language, 2: Neither)
@@ -198,7 +198,7 @@ elif selected == "Tweets Classes":
         # Horizontal line separator
         st.markdown("---")
 
-elif selected == "Tweets Preprocessing":
+elif selected == "Data Preparation":
     st.title("Dataset Preprocessing")
 
     st.write("""
@@ -245,7 +245,7 @@ elif selected == "Tweets Preprocessing":
         # Horizontal line separator
         st.markdown("---")
 
-elif selected == "Model Selection":
+elif selected == "ML Model Selection":
     st.title("Model Selection")
     st.write("""
     (Classifier training and testing): Ten-fold cross-validation was used to train 
